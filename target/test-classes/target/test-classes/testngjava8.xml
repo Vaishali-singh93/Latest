@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All functionaltest.seleniumtestng.SeleniumExercise Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Vaishali_Singh/onboarding-grow-program">
+        <parameter name="roses" value="1"></parameter>
+        <parameter name="lillys" value="3"></parameter>
+        <parameter name="jasmines" value="2"></parameter>
+       <classes>
+           <class name="onboardlearning.learning2.TestCaseCalculatePrice"/>
+       </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="C:/Users/Vaishali_Singh/onboarding-grow-program">
+        <parameter name="fanUnit" value="1"></parameter>
+        <parameter name="tvUnit" value="3"></parameter>
+        <parameter name="lightUnit" value="2"></parameter>
+        <parameter name="laptopUnit" value="10"></parameter>
+        <classes>
+            <class name="onboardlearning.learning4.UnitConsumptionWhenSwitchOn">
+                    <methods>
+                        <include name="sortDevicesBasedOnConsumption"/>
+                    </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="C:/Users/Vaishali_Singh">
+        <parameter name="toppingsCost" value="35"></parameter>
+        <parameter name="baseCost" value="123"></parameter>
+        <classes>
+            <class name="onboardlearning.learning1.PizzaOrder"/>
+        </classes>
+    </test>
+</suite>
