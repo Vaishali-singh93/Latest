@@ -5,6 +5,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
+
 import static io.restassured.RestAssured.given;
 
 public class APIValidation {
@@ -13,8 +14,11 @@ public class APIValidation {
     public void validatePostApi(){
         String responsePost = given().log().all().body("{\"name\":\"test\",\"salary\":\"123\",\"age\":\"23\"}")
                 .when().post("http://dummy.restapiexample.com/api/v1/create").then().extract().body().asString();
-        JsonPath js = new JsonPath(responsePost);
-        System.out.println(js.get("name").toString());
+        System.out.println(responsePost);
+        JsonPath j = new JsonPath(responsePost);
+        String asr = j.getJsonObject("name");
+        System.out.println(asr);
+
 
     }
 
@@ -29,8 +33,10 @@ public class APIValidation {
 
     @Test
     public void validateGetApi(){
-       JsonPath responseGet= given().log().all().get("http://ergast.com/api/f1/2018/last.json").then().extract().body().jsonPath();
+       String responseGet= given().log().all().get("http://ergast.com/api/f1/2018/last.json").then().extract().body().asString();
         //org.testng.Assert.assertEquals(responseGet.getStatusCode(),200);
-        System.out.println(responseGet.get("MRData.xmlns").toString());
+        System.out.println(responseGet);
+        JsonPath path = new JsonPath(responseGet);
+        System.out.println(path.getString("MRData.RaceTable.Races[0].round"));
     }
 }

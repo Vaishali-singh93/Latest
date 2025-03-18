@@ -12,6 +12,7 @@ public class TestA {
         m1.put(2,"test13");
         m1.put(3,"test9");
         m1.put(4,"test19");
+
         java.util.HashMap<Integer, String> m2 = new java.util.HashMap<>();
         m2.put(1,"test12");
         m2.put(2,"test13");
