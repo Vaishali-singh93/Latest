@@ -2,6 +2,9 @@ package mywork;
 
 import leet.Trial2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Trial extends Trial2 {
     public static void bar(int value){
 
@@ -12,8 +15,15 @@ public class Trial extends Trial2 {
         }
     }
 
+    public static void checkMap() {
+        Map<String,String> m = new HashMap<>();
+        m.put("he","wo");
+        m.computeIfPresent("he",(k,v)->"tel");
+        System.out.println(m);
+    }
+
     public static void main(String[] args) {
-//       Trial2 ob = new Trial2();
+//        Trial2 ob = new Trial2();
 //       ob.fun1();
 //       System.err.println("test");
 //       String st = "singh";
@@ -28,6 +38,7 @@ public class Trial extends Trial2 {
 
 
 //bar(2);
+        checkMap();
 
     }
 

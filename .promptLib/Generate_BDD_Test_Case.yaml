@@ -1,0 +1,11 @@
+context: |-
+  Create BDD test cases for the user story .
+  Make sure each step is covered avoiding any duplication . Create the scenarios with examples which requires test data for validation.
+  Cover both positive and negative scenario.
+  Create the feature file according to the functionality specified in the requirement.
+integration_settings:
+  temperature: 0.2
+  model_name: gpt-4o-2024-11-20
+  max_tokens: 512
+  top_p: 0.6
+  top_k: 30

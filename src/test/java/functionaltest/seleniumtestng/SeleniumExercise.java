@@ -48,17 +48,6 @@ public class SeleniumExercise extends BaseTest {
 
     @Test(priority = 1)
     public void clickLink() throws InterruptedException {
-//        driver.switchTo().newWindow(WindowType.TAB);
-
-        DevTools ts = ((HasDevTools)driver).getDevTools();
-        ts.createSession();
-        ts.send(Log.enable());
-
-        ts.addListener(Log.entryAdded(),logEntry -> {
-            System.out.println("log-------"+logEntry.getText());
-            System.out.println("level-------"+logEntry.getLevel());
-        });
-
         driver.get("https://rahulshettyacademy.com/");
         driver.manage().window().maximize();
         Thread.sleep(2000);
